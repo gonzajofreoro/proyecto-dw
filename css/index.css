@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-image: url(https://i.pinimg.com/474x/71/74/d0/7174d0e0ca1aa9d4fdf1842fe6a4868b--bead-embroidery-patterns-op-art.jpg);
+  overflow-x: hidden;
+}
+
+.grid-container > * {
+  box-shadow: 1px 1px 7px 3px #662D65;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*****HEADER*****/
+.header {
+  grid-area: header;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: sticky;
+}
+
+.label-container{
+  background-color: black;
+}
+
+.header__label{
+  font-size: 2em;
+  font-style: italic;
+  text-shadow: 1px 1px 6px white;
+  text-decoration: underline;
+}
+
+/*****NAVBAR*****/
+.navbar {
+  grid-area: navbar;
+  background-color: black;
+  display: inline-flex;
+}
+
+/*****SIDEBAR*****/
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+}
+
+/*****MAIN*****/
+.main {
+  grid-area: main;
+  background-color: black;
+  color: white;
+}
+
+.intro__text{
+  margin: 100px 0 100px 0;
+  font-size: 1em;
+}
+
+.sec-list{
+  list-style: none;
+}
+/****INDEX****/
+.carrusel-bs{
+  height: 50%;
+  width: 50%;
+  box-shadow: -1px 1px 7px 0px #662D65;
+  border: 5px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/****CONTACT SECTION*****/
+.contact__form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+  background-image: -moz-linear-gradient(white, grey, black); }
+
+.contact__form__text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  color: grey;
+  padding: 20px 40px;
+  border: 0;
+  outline: none;
+  color: #ddd;
+  transition: .5s; }
+
+.contact__form__textarea {
+  resize: none;
+  height: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  color: grey;
+  padding: 20px 40px;
+  border: 0;
+  outline: none;
+  color: #ddd;
+  transition: .5s
+}
+
+.contact__form__btn {
+  float: right;
+  border: 0;
+  background: #111;
+  color: white;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.contact__form__btn:hover {
+  background: white;
+  color: black; 
+}
+/*****DISEÑOS SECTION*****/
+.realismo-container , .blackwork-container , .oldschool-container, .newschool-container, .japones-container{ 
+  height: 550px;
+  width: 90vw;
+  box-shadow: -1px 1px 7px 0px #662D65;
+  border: 5px;
+  padding: 10px;
+  margin: 25px 0 25px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+}
+
+.realismo__text , .blackwork__text , .oldschool__text, .newschool__text{
+  padding-bottom: 20px;
+}
+
+/*****FOOTER*****/
+.footer {
+  grid-area: footer;
+  background-color: black;
+}
+
+.footer__links__img{
+  height: 60px;
+  width: 60px;
+  margin: 15px;
+}
+
+ /*****RESPONSIVE*****/
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "footer"  100px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" auto
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar navbar navbar"
+      "main  main   main" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
